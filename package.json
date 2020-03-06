@@ -1,0 +1,23 @@
+{
+  "name": "ralcolor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danxmc/RALColor.git"
+  },
+  "author": "danx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danxmc/RALColor/issues"
+  },
+  "homepage": "https://github.com/danxmc/RALColor#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2"
+  }
+}
