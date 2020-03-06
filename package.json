@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "scrape": "node scrape.js",
     "test": ""
   },
   "repository": {
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/danxmc/RALColor#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "csv-writer": "^1.6.0",
     "request": "^2.88.2"
   }
 }
