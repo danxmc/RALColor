@@ -5,9 +5,10 @@ const readline = require('readline');
 const cwait = require('cwait');
 
 const MAX_SIMULTANEOUS_DOWNLOADS = 20;
+const SCRAPED_DATA_FILE_NAME = 'RAL.csv';
 
 async function colorScrapeBatch() {
-    const readStream = fs.createReadStream('RALBatch.csv');
+    const readStream = fs.createReadStream(SCRAPED_DATA_FILE_NAME);
     let writeStream;
 
     const rl = readline.createInterface({
@@ -62,11 +63,11 @@ async function colorScrapeBatch() {
 
     // If red, green or blue values have changed append to file instead of writing
     if (red == 0 && green == 0 && blue == 0) {
-        writeStream = fs.createWriteStream('RALBatch.csv');
+        writeStream = fs.createWriteStream(SCRAPED_DATA_FILE_NAME);
         // Write Headers for file
         writeStream.write(`RGB,HEX,RAL\n`);
     } else {
-        writeStream = fs.createWriteStream('RALBatch.csv', {
+        writeStream = fs.createWriteStream(SCRAPED_DATA_FILE_NAME, {
             flags: 'a'
         });
     }
